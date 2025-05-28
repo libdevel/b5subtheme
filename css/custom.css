@@ -1,0 +1,257 @@
+/*  style guide 
+
+#232323 (Black)
+#eeb310 (Gold)
+#d3bc8d (Realistic Gold)
+#fbfaf5 (Off-White)
+
+*/
+
+
+/* Google Fonts
+--------------------------------------------- */
+
+.roboto-slab-<uniquifier>{font-family:"Roboto Slab",serif;font-optical-sizing:auto;font-weight:<weight>;font-style:normal}.barlow-semi-condensed-thin{font-family:"Barlow Semi Condensed",sans-serif;font-weight:100;font-style:normal}.barlow-semi-condensed-extralight{font-family:"Barlow Semi Condensed",sans-serif;font-weight:200;font-style:normal}.barlow-semi-condensed-light{font-family:"Barlow Semi Condensed",sans-serif;font-weight:300;font-style:normal}.barlow-semi-condensed-regular{font-family:"Barlow Semi Condensed",sans-serif;font-weight:400;font-style:normal}.barlow-semi-condensed-medium{font-family:"Barlow Semi Condensed",sans-serif;font-weight:500;font-style:normal}.barlow-semi-condensed-semibold{font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;font-style:normal}.barlow-semi-condensed-bold{font-family:"Barlow Semi Condensed",sans-serif;font-weight:700;font-style:normal}.barlow-semi-condensed-extrabold{font-family:"Barlow Semi Condensed",sans-serif;font-weight:800;font-style:normal}.barlow-semi-condensed-black{font-family:"Barlow Semi Condensed",sans-serif;font-weight:900;font-style:normal}.barlow-semi-condensed-thin-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:100;font-style:italic}.barlow-semi-condensed-extralight-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:200;font-style:italic}.barlow-semi-condensed-light-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:300;font-style:italic}.barlow-semi-condensed-regular-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:400;font-style:italic}.barlow-semi-condensed-medium-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:500;font-style:italic}.barlow-semi-condensed-semibold-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;font-style:italic}.barlow-semi-condensed-bold-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:700;font-style:italic}.barlow-semi-condensed-extrabold-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:800;font-style:italic}.barlow-semi-condensed-black-italic{font-family:"Barlow Semi Condensed",sans-serif;font-weight:900;font-style:italic}
+
+@font-face {
+    font-family: 'albertus_mediumregular';
+	font-weight:400;
+	font-style: normal;
+	font-display: block;
+    src: url('../fonts/albr55w-webfont.eot');
+    src: url('../fonts/albr55w-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/albr55w-webfont.woff') format('woff'),
+         url('../fonts/albr55w-webfont.svg#albertus_mediumregular') format('svg');
+}
+
+
+@font-face {
+  font-family: 'Material Icons Sharp';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/material-icons/oPWQ_lt5nv4pWNJpghLP75WiFR4kLh3kvmvR.woff2') format('woff2');
+}
+
+.material-icons-sharp {
+  font-family: 'Material Icons Sharp';font-weight: normal;font-style: normal;font-size: 24px;
+  line-height: 1;letter-spacing: normal;text-transform: none;
+  display: inline-block;white-space: nowrap;word-wrap: normal;direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;}
+
+
+
+/* links */
+	
+	*:focus, input:focus, input[type=search]:focus {
+	    outline: 3px solid red !important;
+	    outline-offset: 2px !important;
+	    -webkit-transition: none !important;
+	    -moz-transition: none !important;
+	    -o-transition: none !important;
+	    transition: none !important;
+	}
+
+body {color:#232323; font-size: 1.1rem; line-height:1.66; margin: 0;
+    font-family: "Roboto Slab",Arial,Helvetica,sans-serif;}
+
+
+a {color: #04407B; text-decoration: underline;}
+a:hover, a:focus {color: #946232;text-decoration: none; border:0px;}
+
+/* Headings
+--------------------------------------------- */
+
+
+h1 { font-size:4.5rem; font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; 
+    text-transform: uppercase; letter-spacing:-0.015em; font-weight:700;}
+
+.page-header {padding-bottom:5px; margin-bottom: 2.5rem; border-bottom: 1px solid #bfbebe;}
+
+h2 {margin-bottom: 1rem;}
+
+/* header */
+
+.firstnav {border-top: 10px solid #eeb310; background-color: #000; height:65px; color:#fff;}
+
+.firstnav .navbar {height:55px;}
+
+.firstnav a, .secondnav a, .libnav a {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; text-transform: uppercase;font-size: 14px; font-weight:bold; letter-spacing:0.015em; padding-bottom:15px;}
+
+.firstnav a  {color:#fff;}
+.secondnav a, .libnav a {color:#000;}
+
+.firstnav a :hover, .firstnav a:active, .firstnav a:focus, .firstnav .navbar-nav .nav-link.show  {color: #eeb310;}
+
+.firstnav .nav > li > a:hover {
+  text-decoration: none;
+  background-color: #eee; color: #eeb310;
+}
+
+/* mobile dropdown */
+.firstnav .dropdown-menu  a  {color:#000;}
+.firstnav .dropdown-menu > li a:hover, .dropdown-menu > li a:focus, .dropdown-menu > li a:active {text-decoration: underline;color: #eeb310;}
+
+.firstnav .menu-item--expanded, .secondnav .menu-item--expanded, .libnav .menu-item--expanded {list-style:none;}
+
+
+/* mobile button */
+.firstnav button {width: 60px; /*height: 50px;*/ padding: 0;color: #fff; border:0px;}
+.secondnav button, .libnav button  {width: 60px;height: 50px;padding: 0;color: #000; border:0px;}
+
+.firstnav .icon, .secondnav .icon, .libnav .icon {margin: -5px;font-size: 26px;line-height: 26px;}
+.firstnav .icon-text, .secondnav .icon-text, .libnav .icon-text   {display: block;margin: -5px 0;font-size: 12px; line-height: 10px;}
+
+.firstnav .icon-text {color:#fff;}
+.secondnav .icon-text, .libnav .icon-text  {color:#000;}
+
+.secondnav  img {width: 200px; height: 22px;}
+
+
+.libnav .navbar-toggler {}
+
+/* hero image */
+
+.site-hero-wrap {/* overflow: hidden; */ position: relative;}
+.region-hero img{width:100%; display:block;}
+
+.library-logo {  background-color: #000;   padding: 1rem;  position: absolute;}
+
+ .library-logo a { font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; font-size: 2em; font-weight: 700;  text-transform: uppercase;  color: #fff; text-decoration: none;}
+
+ .library-logo a:hover,  .library-logo a:focus {text-decoration: underline;} 
+
+/* breadcrumbs */
+
+.breadcrumb-item-home::before {
+  float: left;
+  padding-right: .5rem;
+  font-family: "Material Icons Sharp";
+  color: #6c757d;
+  content: "home";
+}
+
+
+/* content */
+.front  #main-content h1 {display:none;}
+.front .page-header {display:none;}
+.path-frontpage h1 {display:none;}
+
+/* quick search */
+
+.homepagesearch .tab-content {min-height: 9.7em;
+	background-color: #fff; border: 1px solid #c0c0c0;
+	padding:20px 10px 20px 10px; margin-bottom: 20px;}	
+div.homepagesearch.tabs li > button {
+  font-weight: bold;}
+
+.library-links {padding-top:10px; margin-bottom:0px;clear:both;}
+
+
+/* libcal hours */
+	
+.libraryHoursContainer {min-height:55px;}
+
+.hours-today { border-spacing: 0; border-collapse: collapse; width: 100%; margin-bottom:0px;}
+.hours-today-row td, .hours-today-row th { padding: 8px 5px; border:none;}
+
+.hours-today-row { border-bottom: 1px solid #ddd; }
+
+.s-lc-w-today-view-link a { text-decoration: underline; /*border-bottom: 1px dotted #ccc;*/ }
+.s-lc-w-today-view-all { padding: 8px 5px; }
+
+
+/*  books and news blocks */
+.region-books-display li {float:left;margin-left:20px;list-style-image: none;
+    list-style-type: none;}
+
+/* add book-ul class in view */	
+ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}	
+
+.region-books-display li img {max-width:135px;}
+
+.region-books-display .more-link {clear: both;}
+
+/* news */
+.view-news-and-events .views-row {margin-bottom: 10px;}
+.view-news .views-row {margin-bottom: 10px;}
+.row .views-row {margin-left:15px; margin-right:15px;}
+
+
+/* cankle */
+
+.cankle {background-color:#232323; font-size:16px; padding-top:100px;color: #fff;}
+
+.cankle h3, .cankle h4 {color: #fff;}
+
+.cankle ul {padding-top:10px; padding-left:0;}
+
+.cankle li {margin-left:0px;
+	list-style-image: none;list-style-type: none;
+	margin-bottom: 10px;padding-bottom: 10px;
+	border-bottom: 1px dotted #494949;}
+
+.cankle a  {/*color: #EEB310;*/ color:#efbb24;}
+.cankle a:hover {color: #fff;/*border-bottom: 1px dotted #fff;*/}
+
+
+.footer {background-color:#d3bc8d; padding: 30px 20px 30px 20px; font-weight: 700;}
+
+.footer p {text-align:center;margin-bottom:0px;}
+.footer a {/*color: #EEB310;*/ color: #232323; text-decoration:underline;}
+
+
+
+
+/* https://getbootstrap.com/docs/5.3/layout/breakpoints/  */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+  .secondnav .navbar {min-height: 100px;}
+    .secondnav  img {width: 250px; height: 27.5px;}
+
+
+    .region-hero img { height:400px;}
+
+
+   .library-logo a {font-size:4em;}
+
+    .frontdecor {background-color: #d3bc8d;padding: 15px;margin-bottom: 20px;}
+    .homepagesearch {padding: 20px;background-color: #fff;}
+
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+  .navbar-expand-lg .navbar-nav {flex-direction: row;}
+  .navbar-expand-xl .navbar-nav {flex-direction: row;}
+
+
+    .library-logo a { font-size:5em;}
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+    .library-logo a { font-size:6em;}
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+
+    .region-hero img { height:400px;}
+
+ 
+    .library-logo a { font-size:6em;}
+
+ }
+

@@ -1,0 +1,88 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link URL, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{% set wrapper_attributes = wrapper_attributes ?: create_attribute() %}
+
+{% set attributes = attributes ?: create_attribute() %}
+
+<div {{ wrapper_attributes.addClass('sidebar-menu','sidebar-menu--' ~ menu_name) }}>
+  {{ menus.build_menu(items, attributes, 0) }}
+</div>
+
+{# Macro to build the menu. #}
+{% macro build_menu(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {%
+      set ul_classes = [
+      menu_level == 0 ? 'navbar-nav justify-content-end flex-wrap main-menu' : '',
+      menu_level == 0 ? 'sidebar-menu-parent' : '',
+      menu_level > 0 ? 'dropdown-menu' : '',
+      'nav-level-' ~ menu_level,
+    ]
+    %}
+    <ul{{attributes.addClass(ul_classes)}}>
+      {% for item in items %}
+        {{ menus.add_link(item, attributes.removeClass(ul_classes), menu_level) }}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{# Macro to build the menu link items. #}
+{% macro add_link(item, attributes, menu_level) %}
+  {% import _self as menus %}
+  {%
+    set list_item_classes = [
+    'nav-item',
+    item.is_expanded ? 'dropdown' : '',
+    item.in_active_trail ? 'in-active-trail show' : '',
+    'menu-level-' ~ menu_level
+  ]
+  %}
+  {%
+    set link_class = [
+    menu_level == 0 ? 'nav-link' : '',
+    item.in_active_trail ? 'active' : '',
+    (item.is_expanded or item.is_collapsed) ? 'dropdown-toggle' : '',
+    menu_level > 0 ? 'dropdown-item' : '',
+  ]
+  %}
+
+  {% set item_attributes = item.attributes ?: create_attribute() %}
+
+  <li{{item_attributes.addClass(list_item_classes)}}>
+    {% if item.below %}
+      <div class="link-container">
+        {{ link(item.title, item.url, { 'class': link_class, 'role': 'button', 'aria-expanded': item.in_active_trail ? 'true' : 'false', 'title': ('Expand menu' | t) ~ ' ' ~ item.title }) }}
+        <span class="dropdown-arrow">
+          <svg role="button" aria-expanded="{% if item.in_active_trail %}true{% else %}false{% endif %}" width="16" height="16" viewbox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.00777 8.33901C6.84851 8.33901 6.69921 8.31413 6.55986 8.26436C6.42051 8.21459 6.29112 8.12999 6.17168 8.01055L0.647497 2.48637C0.42852 2.26739 0.324009 1.99367 0.333962 1.66521C0.343916 1.33674 0.458381 1.06302 0.677357 0.844044C0.896334 0.625068 1.17503 0.515579 1.51345 0.515579C1.85187 0.515579 2.13057 0.625068 2.34954 0.844044L7.00777 5.50227L11.6959 0.814184C11.9148 0.595207 12.1886 0.490696 12.517 0.500649C12.8455 0.510603 13.1192 0.625068 13.3382 0.844044C13.5572 1.06302 13.6666 1.34172 13.6666 1.68014C13.6666 2.01855 13.5572 2.29725 13.3382 2.51623L7.84386 8.01055C7.72442 8.12999 7.59503 8.21459 7.45568 8.26436C7.31633 8.31413 7.16703 8.33901 7.00777 8.33901Z" fill="currentColor"/>
+          </svg>
+        </span>
+      </div>
+      {{ menus.build_menu(item.below, attributes, menu_level + 1) }}
+    {% else %}
+      {{ link(item.title, item.url, { 'class': link_class }) }}
+    {% endif %}
+  </li>
+{% endmacro %}

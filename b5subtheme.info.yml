@@ -1,0 +1,39 @@
+name: 'B5 subtheme'
+type: theme
+description: 'B5 subtheme subtheme based on Bootstrap 5 theme.'
+core_version_requirement: '^10.1 || ^11.0'
+'base theme': bootstrap5
+libraries:
+  - b5subtheme/global-styling
+ckeditor_stylesheets:
+  - css/style.css
+ckeditor5-stylesheets:
+  - css/ck5style.css
+regions:
+  header: 'Header'
+  soc_icons: 'Social Icons'
+  soc_nav: 'Social Nav'
+  branding: 'Branding'
+  campus_nav: 'Campus Navigation'
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  nav_offcanvas: 'Campus Navigation Offcanvas'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  hero: 'Featured Image'
+  libnav: 'Lib Navigation'
+  libnav_collapsible: 'Lib Navigation (Collapsible)'
+  breadcrumb: 'Breadcrumbs'
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  books_display: 'Books'
+  news_display: 'News'
+  cankle1: 'Cankle first'
+  cankle2: 'Cankle second'
+  cankle3: 'Cankle third'
+  cankle4: 'Cankle fourth'
+  footer: 'Footer'
+libraries-override:
+  bootstrap5/global-styling: false
