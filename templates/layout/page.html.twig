@@ -68,15 +68,21 @@ set footer_classes = ' ' ~
 </div> <!-- /social-links-wrap -->
 
       {% if page.soc_nav %}
-        <button class="navbar-toggler campusbutton" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler campusbutton" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#socnavbarSupportedContent" aria-controls="socnavbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                              <span class="icon material-icons-sharp">more_horiz</span>
                      <span class="icon-text">campus</span>
         </button>
-        <div class="collapse navbar-collapse justify-content-md-end" id="socnavbarSupportedContent">
+        <div class="offcanvas offcanvas-end text-bg-dark" id="socnavbarSupportedContent">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Campus Menu</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div><!-- /header -->
+           <div class="offcanvas-body justify-content-md-end">
           {{ page.soc_nav }}
-        </div>
+              </div><!-- /offcanvas body-->
+           </div><!-- /offcanvas -->
       {% endif %}
     </div>
   </nav>
@@ -98,7 +104,7 @@ set footer_classes = ' ' ~
                      <span class="icon-text">campus</span>
         </button>
 
-        <div class="offcanvas offcanvas-end " id="navbarSupportedContent">
+        <div class="offcanvas offcanvas-end" id="navbarSupportedContent">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Campus Menu</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

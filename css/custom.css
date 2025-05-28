@@ -216,7 +216,7 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
     .secondnav  img {width: 250px; height: 27.5px;}
 
 
-    .region-hero img { height:400px;}
+    .region-hero img { max-height:400px;}
 
 
    .library-logo a {font-size:4em;}
@@ -229,8 +229,8 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 
-  .navbar-expand-lg .navbar-nav {flex-direction: row;}
-  .navbar-expand-xl .navbar-nav {flex-direction: row;}
+  .navbar-expand-lg .navbar-nav {/* flex-direction: row; */}
+  .navbar-expand-xl .navbar-nav {/* flex-direction: row; */}
 
 
     .library-logo a { font-size:5em;}
