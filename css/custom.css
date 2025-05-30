@@ -59,16 +59,21 @@ body {color:#232323; font-size: 1.1rem; line-height:1.66; margin: 0;
 a {color: #04407B; text-decoration: underline;}
 a:hover, a:focus {color: #946232;text-decoration: none; border:0px;}
 
+
 /* Headings
 --------------------------------------------- */
 
 
-h1 { font-size:4.5rem; font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; 
+h1 { font-size:4.0rem; font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; 
     text-transform: uppercase; letter-spacing:-0.015em; font-weight:700;}
 
 .page-header {padding-bottom:5px; margin-bottom: 2.5rem; border-bottom: 1px solid #bfbebe;}
 
 h2 {margin-bottom: 1rem;}
+
+
+#main {}
+
 
 /* header */
 
@@ -76,7 +81,12 @@ h2 {margin-bottom: 1rem;}
 
 .firstnav .navbar {height:55px;}
 
+.firstnav img {color:#fff;}
+
 .firstnav a, .secondnav a, .libnav a {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; text-transform: uppercase;font-size: 14px; font-weight:bold; letter-spacing:0.015em; padding-bottom:15px;}
+
+.libnav a  {font-size: 0.9em;}
+
 
 .firstnav a  {color:#fff;}
 .secondnav a, .libnav a {color:#000;}
@@ -96,7 +106,7 @@ h2 {margin-bottom: 1rem;}
 
 
 /* mobile button */
-.firstnav button {width: 60px; /*height: 50px;*/ padding: 0;color: #fff; border:0px;}
+.firstnav button {width: 60px; height: 50px; padding: 0;color: #fff; border:0px;}
 .secondnav button, .libnav button  {width: 60px;height: 50px;padding: 0;color: #000; border:0px;}
 
 .firstnav .icon, .secondnav .icon, .libnav .icon {margin: -5px;font-size: 26px;line-height: 26px;}
@@ -115,22 +125,17 @@ h2 {margin-bottom: 1rem;}
 .site-hero-wrap {/* overflow: hidden; */ position: relative;}
 .region-hero img{width:100%; display:block;}
 
-.library-logo {  background-color: #000;   padding: 1rem;  position: absolute;}
+.library-logo {  background-color: #000;   padding: 0.5rem;  position: absolute;}
 
- .library-logo a { font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; font-size: 2em; font-weight: 700;  text-transform: uppercase;  color: #fff; text-decoration: none;}
+ .library-logo a { font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; font-size: 2em; font-weight: 700;  text-transform: uppercase;  color: #fff; text-decoration: none; line-height:1;}
 
  .library-logo a:hover,  .library-logo a:focus {text-decoration: underline;} 
 
+
+
 /* breadcrumbs */
-
-.breadcrumb-item-home::before {
-  float: left;
-  padding-right: .5rem;
-  font-family: "Material Icons Sharp";
-  color: #6c757d;
-  content: "home";
-}
-
+.breadcrumb  {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; color:#424242; font-weight:700}
+.breadcrumb li, .breadcrumb a {color:#424242;}
 
 /* content */
 .front  #main-content h1 {display:none;}
@@ -188,15 +193,20 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 
 .cankle li {margin-left:0px;
 	list-style-image: none;list-style-type: none;
-	margin-bottom: 10px;padding-bottom: 10px;
-	border-bottom: 1px dotted #494949;}
+	margin-bottom: 10px;padding-bottom: 10px;}
 
-.cankle a  {/*color: #EEB310;*/ color:#efbb24;}
-.cankle a:hover {color: #fff;/*border-bottom: 1px dotted #fff;*/}
+.footerlogo a {background-image: url(images/footerlogo.png);}
+
+.cankle svg {margin-right: 0.4rem;}
+
+ul.apply > li, ul.health > li, ul.quicklinks > li {border-bottom: 1px solid #d8d8d8;}
+
+
+.cankle a  {/*color: #EEB310;*/ font-weight: 700; color:#fff; text-decoration:none; border-bottom: 1px dotted #fff;}
+.cankle a:hover {color:#efbb24; text-decoration:underline;}
 
 
 .footer {background-color:#d3bc8d; padding: 30px 20px 30px 20px; font-weight: 700;}
-
 .footer p {text-align:center;margin-bottom:0px;}
 .footer a {/*color: #EEB310;*/ color: #232323; text-decoration:underline;}
 
@@ -212,17 +222,20 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 
-  .secondnav .navbar {min-height: 100px;}
-    .secondnav  img {width: 250px; height: 27.5px;}
+  .secondnav .navbar {min-height: 85px;}
+  .secondnav  img {width: 250px; height: 27.5px;}
 
 
-    .region-hero img { max-height:400px;}
 
 
-   .library-logo a {font-size:4em;}
+  .region-hero img { max-height:380px;}
 
-    .frontdecor {background-color: #d3bc8d;padding: 15px;margin-bottom: 20px;}
-    .homepagesearch {padding: 20px;background-color: #fff;}
+  .library-logo a {font-size:4em;}
+
+
+
+   .frontdecor {background-color: #d3bc8d;padding: 15px;margin-bottom: 20px;}
+   .homepagesearch {padding: 20px;background-color: #fff;}
 
  }
 
@@ -232,6 +245,14 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
   .navbar-expand-lg .navbar-nav {/* flex-direction: row; */}
   .navbar-expand-xl .navbar-nav {/* flex-direction: row; */}
 
+  .navbar-nav .dropdown:hover > .dropdown-menu {display: block;}
+
+
+
+  .libnav .navbar-nav .link-container {align-items: center;display: flex;justify-content: space-between;}
+
+ .libnav .navbar-nav .dropdown-arrow {cursor: pointer;display: block;margin-top: -16px;padding-left: 10px;}
+
 
     .library-logo a { font-size:5em;}
 
@@ -240,7 +261,7 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
 
-    .library-logo a { font-size:6em;}
+    .library-logo a { font-size:5em;}
 
 }
 
@@ -248,10 +269,10 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 @media (min-width: 1400px) { 
 
 
-    .region-hero img { height:400px;}
+    .region-hero img { max-height:400px;}
 
  
-    .library-logo a { font-size:6em;}
+    .library-logo a { font-size:5em;}
 
  }
 
