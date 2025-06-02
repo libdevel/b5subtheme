@@ -19,7 +19,7 @@
 /* links */
 	
 	*:focus, input:focus, input[type=search]:focus {
-	    outline: 3px solid red !important;
+	    outline: 2px solid red !important;
 	    outline-offset: 2px !important;
 	    -webkit-transition: none !important;
 	    -moz-transition: none !important;
@@ -46,6 +46,8 @@ h1 { font-size:4.0rem; font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-
 
 h2 {margin-bottom: 1rem;}
 
+h2, h3, h4 {margin-top: 0.9rem;}
+
 
 #main {}
 
@@ -54,11 +56,13 @@ h2 {margin-bottom: 1rem;}
 
 .firstnav {border-top: 10px solid #eeb310; background-color: #000; height:65px; color:#fff;}
 
-.firstnav .navbar {height:55px;}
 
-.firstnav img {color:#fff;}
 
-.firstnav a, .secondnav a, .libnav a {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; text-transform: uppercase;font-size: 14px; font-weight:bold; letter-spacing:0.015em; padding-bottom:15px;}
+.firstnav .navbar {height:55px; --bs-navbar-padding-y: 0rem;}
+
+.firstnav img {/*color:#fff;*/}
+
+.firstnav a, .secondnav a, .libnav a, .nav.nav-pills.flex-column a {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; text-transform: uppercase;font-size: 14px; font-weight:bold; letter-spacing:0.015em; padding-bottom:15px;}
 
 .libnav a  {font-size: 0.9em;}
 
@@ -66,12 +70,15 @@ h2 {margin-bottom: 1rem;}
 .firstnav a  {color:#fff;}
 .secondnav a, .libnav a {color:#000;}
 
-.firstnav a :hover, .firstnav a:active, .firstnav a:focus, .firstnav .navbar-nav .nav-link.show  {color: #eeb310;}
+.firstnav a :hover, .firstnav a:active, .firstnav a:focus, .firstnav .navbar-nav .nav-link.show  {color: #eeb310;background-color: #eee;}
 
-.firstnav .nav > li > a:hover {
-  text-decoration: none;
-  background-color: #eee; color: #eeb310;
-}
+.firstnav .nav > li > a:hover {text-decoration: none;background-color: #eee; color: #eeb310;}
+
+
+.firstnav .dropdown-item.active, .secondnav .dropdown-item.active, .libnavnav .dropdown-item.active, .firstnav .dropdown-item.active, 
+
+.fourthnav {background-color: #000; color:#fff;}
+
 
 /* mobile dropdown */
 .firstnav .dropdown-menu  a  {color:#000;}
@@ -84,7 +91,7 @@ h2 {margin-bottom: 1rem;}
 .firstnav button {width: 60px; height: 50px; padding: 0;color: #fff; border:0px;}
 .secondnav button, .libnav button  {width: 60px;height: 50px;padding: 0;color: #000; border:0px;}
 
-.firstnav .icon, .secondnav .icon, .libnav .icon {margin: -5px;font-size: 26px;line-height: 26px;}
+.firstnav .icon, .secondnav .icon, .libnav .icon {margin: -5px; font-size: 26px; line-height: 26px;}
 .firstnav .icon-text, .secondnav .icon-text, .libnav .icon-text   {display: block;margin: -5px 0;font-size: 12px; line-height: 10px;}
 
 .firstnav .icon-text {color:#fff;}
@@ -94,6 +101,15 @@ h2 {margin-bottom: 1rem;}
 
 
 .libnav .navbar-toggler {}
+
+
+/* sidebar menu */
+
+.nav.nav-pills.flex-column > li {
+  margin: -1px 0 0;
+  border: solid 1px #e9ecef;
+}
+
 
 /* hero image */
 
@@ -109,7 +125,7 @@ h2 {margin-bottom: 1rem;}
 
 
 /* breadcrumbs */
-.breadcrumb  {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; color:#424242; font-weight:700}
+.breadcrumb  {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; letter-spacing:0.015em; color:#424242; font-weight:700}
 .breadcrumb li, .breadcrumb a {color:#424242;}
 
 /* content */
@@ -156,6 +172,18 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 .view-news-and-events .views-row {margin-bottom: 10px;}
 .view-news .views-row {margin-bottom: 10px;}
 .row .views-row {margin-left:15px; margin-right:15px;}
+
+/* journal a-z */
+
+.journal-container {margin-top:40px;}
+	
+.alpha-list li, .alpha-list li {border: 1px solid #ddd;color: #000;
+    width: 25px;height: 25px;
+    display: inline-block;text-align: center;
+    margin: 0 7px 7px 0;padding: 0;text-indent: 0;}
+
+.alpha-list a {color:#000;}
+
 
 
 /* cankle */
@@ -244,7 +272,7 @@ ul.apply > li, ul.health > li, ul.quicklinks > li {border-bottom: 1px solid #d8d
 @media (min-width: 1400px) { 
 
 
-    .region-hero img { max-height:400px;}
+    .region-hero img { max-height:380px;}
 
  
     .library-logo a { font-size:5em;}
