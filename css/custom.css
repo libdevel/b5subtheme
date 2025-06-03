@@ -68,7 +68,7 @@ h2, h3, h4 {margin-top: 0.9rem;}
 .firstnav .nav > li > a:hover {text-decoration: none;background-color: #eee; color: #eeb310;}
 
 
-.firstnav .dropdown-item.active, .secondnav .dropdown-item.active, .libnavnav .dropdown-item.active, .firstnav .dropdown-item.active, 
+.firstnav .dropdown-item.active, .secondnav .dropdown-item.active, .libnavnav .dropdown-item.active, .fourthnav .dropdown-item.active {/* ??? */}
 
 .fourthnav {background-color: #000; color:#fff;}
 
@@ -233,7 +233,16 @@ ul.apply > li, ul.health > li, ul.quicklinks > li {border-bottom: 1px solid #d8d
    .frontdecor {background-color: #d3bc8d;padding: 10px; margin-bottom: 20px;}
    .homepagesearch {padding: 20px;background-color: #fff;}
 
+   div.homepagesearch.tabs li > button {padding:0.25rem 0.5rem;}
+
  }
+
+
+@media (min-width:768px) and (max-width:991px){
+
+}
+
+
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
@@ -247,8 +256,6 @@ ul.apply > li, ul.health > li, ul.quicklinks > li {border-bottom: 1px solid #d8d
     .libnav .navbar-nav .dropdown-arrow {/* penn cursor: pointer;display: block;margin-top: -16px;padding-left: 10px;*/}
 
     .library-logo a { font-size:5em;}
-
-
 
 }
 
