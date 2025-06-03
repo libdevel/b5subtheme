@@ -49,20 +49,13 @@ h2 {margin-bottom: 1rem;}
 h2, h3, h4 {margin-top: 0.9rem;}
 
 
-#main {}
-
-
 /* header */
 
 .firstnav {border-top: 10px solid #eeb310; background-color: #000; height:65px; color:#fff;}
 
-
-
 .firstnav .navbar {height:55px; --bs-navbar-padding-y: 0rem;}
 
-.firstnav img {/*color:#fff;*/}
-
-.firstnav a, .secondnav a, .libnav a, .nav.nav-pills.flex-column a {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; text-transform: uppercase;font-size: 14px; font-weight:bold; letter-spacing:0.015em; padding-bottom:15px;}
+.firstnav a, .secondnav a, .libnav a, .fourthnav a {font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; text-transform: uppercase;font-size: 14px; font-weight:bold; letter-spacing:0.015em; padding-bottom:15px;}
 
 .libnav a  {font-size: 0.9em;}
 
@@ -138,8 +131,9 @@ h2, h3, h4 {margin-top: 0.9rem;}
 .homepagesearch .tab-content {min-height: 9.7em;
 	background-color: #fff; border: 1px solid #c0c0c0;
 	padding:20px 10px 20px 10px; margin-bottom: 20px;}	
-div.homepagesearch.tabs li > button {
-  font-weight: bold;}
+
+div.homepagesearch.tabs li > button {font-weight: bold; color:#000;}
+div.homepagesearch.tabs li > button:hover  {font-weight: bold; color: #946232;}
 
 .library-links {padding-top:10px; margin-bottom:0px;clear:both;}
 
@@ -196,9 +190,9 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 
 .cankle li {margin-left:0px;
 	list-style-image: none;list-style-type: none;
-	margin-bottom: 10px;padding-bottom: 10px;}
+	/*margin-bottom: 10px; */ padding: 10px;}
 
-.footerlogo a {background-image: url(images/footerlogo.png);}
+.footerlogo a {/*background-image: url(images/footerlogo.png);*/}
 
 .cankle svg {margin-right: 0.4rem;}
 
@@ -208,6 +202,7 @@ ul.apply > li, ul.health > li, ul.quicklinks > li {border-bottom: 1px solid #d8d
 .cankle a  {/*color: #EEB310;*/ font-weight: 700; color:#fff; text-decoration:none; border-bottom: 1px dotted #fff;}
 .cankle a:hover {color:#efbb24; text-decoration:underline;}
 
+.cankle a.social-icons  {text-decoration:none; border:none;}
 
 .footer {background-color:#d3bc8d; padding: 30px 20px 30px 20px; font-weight: 700;}
 .footer p {text-align:center;margin-bottom:0px;}
@@ -228,16 +223,14 @@ ul.apply > li, ul.health > li, ul.quicklinks > li {border-bottom: 1px solid #d8d
   .secondnav .navbar {min-height: 85px;}
   .secondnav  img {width: 250px; height: 27.5px;}
 
-
-
-
   .region-hero img { max-height:380px;}
 
   .library-logo a {font-size:4em;}
 
+   .fourthnav {padding: 10px;}
+   .fourthnav a:hover {/*background-color:#f6f6f6;*/}
 
-
-   .frontdecor {background-color: #d3bc8d;padding: 15px;margin-bottom: 20px;}
+   .frontdecor {background-color: #d3bc8d;padding: 10px; margin-bottom: 20px;}
    .homepagesearch {padding: 20px;background-color: #fff;}
 
  }
@@ -245,19 +238,17 @@ ul.apply > li, ul.health > li, ul.quicklinks > li {border-bottom: 1px solid #d8d
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 
-  .navbar-expand-lg .navbar-nav {/* flex-direction: row; */}
-  .navbar-expand-xl .navbar-nav {/* flex-direction: row; */}
+    .navbar-expand-lg .navbar-nav {/* flex-direction: row; */}
+    .navbar-expand-xl .navbar-nav {/* flex-direction: row; */}
 
-  .navbar-nav .dropdown:hover > .dropdown-menu {display: block;}
+    .navbar-nav .dropdown:hover > .dropdown-menu {display: block;}
 
-
-
-  .libnav .navbar-nav .link-container {align-items: center;display: flex;justify-content: space-between;}
-
- .libnav .navbar-nav .dropdown-arrow {cursor: pointer;display: block;margin-top: -16px;padding-left: 10px;}
-
+    .libnav .navbar-nav .link-container {/* penn align-items: center;display: flex;justify-content: space-between;*/}
+    .libnav .navbar-nav .dropdown-arrow {/* penn cursor: pointer;display: block;margin-top: -16px;padding-left: 10px;*/}
 
     .library-logo a { font-size:5em;}
+
+
 
 }
 
