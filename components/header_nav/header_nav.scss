@@ -1,0 +1,134 @@
+@import '../../scss/init';
+
+.header-nav {
+
+  /* Special rule to hide the bs dropdown arrows */
+  a.nav-link.dropdown-toggle::after {
+    display: none !important;
+    content: "";
+    border: 0;
+  }
+
+  .navbar-nav {
+    // Forcing the main menu to display as a row.
+    flex-direction: row;
+    gap: 40px;
+
+    @keyframes slideup {
+      from {
+        transform: translateY(25px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    li {
+      position: relative;
+
+      &.show .dropdown-menu {
+        display: block;
+        max-height: 1200px;
+        opacity: 1;
+      }
+    }
+
+    .link-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    a.nav-link {
+      padding: 0 0 15px 0;
+      font-size: $font-size-sm;
+      font-weight: 500;
+      font-family: $font-family-condensed;
+
+      &:hover {
+        color: $pa-link-light;
+        text-decoration: none;
+      }
+
+      &.dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      @include media-breakpoint-up('lg') {
+        font-size: $font-size-base;
+      }
+    }
+
+    .dropdown-item {
+      padding: 3px 10px;
+      border-radius: 4px;
+      border-color: transparent;
+      margin: 5px;
+      max-width: 100%;
+      width: unset;
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+        background-color: $pa-limestone-max-light;
+        border-color: $pa-limestone-max-light;
+      }
+    }
+
+    .dropdown-arrow {
+      cursor: pointer;
+      display: block;
+      margin-top: -16px;
+      padding-left: 10px;
+
+      svg {
+        padding: 4px;
+        width: 22px;
+        height: 22px;
+        // Adding a negative right marging to ensure consistent spacing
+        // for links with and without dropdown arrows.
+        margin-right: -8px;
+      }
+
+      @include media-breakpoint-up('lg') {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      width: 300px;
+      animation: none;
+      padding: 20px 10px;
+      left: 0;
+      top: 100%;
+      animation: none;
+      border-top: 7px solid $pa-link-light;
+
+      @include media-breakpoint-up('md') {
+        position: absolute;
+      }
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    @include media-breakpoint-up(md) {
+      .dropdown:hover>.dropdown-menu {
+        display: block;
+      }
+    }
+  }
+
+}

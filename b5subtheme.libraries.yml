@@ -3,3 +3,8 @@ global-styling:
     theme:
       css/style.css: {}
       css/custom.css: {}
+  js:
+    js/primo.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
