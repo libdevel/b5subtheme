@@ -114,7 +114,7 @@ set footer_classes = ' ' ~
    {% endif %}
    {% if page.hero %}
    {% block hero %}
-   <div class="row site-hero-wrap">
+   <div class="site-hero-wrap">
       <div class="clearfix">
          <div class="site-hero">
             {{ page.hero }}
@@ -156,6 +156,12 @@ set footer_classes = ' ' ~
       </div><!-- /libnav -->
    </div><!-- /justify-content-end -->
    {% endif %}
+    {% if page.mobile_chat %}
+    <div class="mobile_chat">
+    {{ page.mobile_chat }}
+     </div><!-- /mobile_chat -->
+    {% endif %}
+
 </header>
 <main role="main" id="main" class="mb-3">
    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -213,25 +219,33 @@ set footer_classes = ' ' ~
 <div class="cankle clearfix">
    <div class="cankle-container container" >
       <div class="row">
-         <div class="col-6 col-lg-3">
+         <div class="col-sm col-md-6 col-xl-3">
+            <div class="mx-4">
             {% if page.cankle1 %}
             {{ page.cankle1 }}
             {% endif %}
+            </div><!--mx-4 -->
          </div><!-- / cankle 1-->
-         <div class="col-6 col-lg-3">
+         <div class="col-sm col-md-6 col-xl-3">
+            <div class="mx-4">
             {% if page.cankle2 %}  
             {{ page.cankle2 }}
             {% endif %}
+         </div><!--mx-4 -->
          </div><!-- / cankle 2 -->
-         <div class="col-6 col-lg-3">
+         <div class="col-sm col-md-6 col-xl-3">
+            <div class="mx-4">
             {% if page.cankle3 %}
             {{ page.cankle3 }}
             {% endif %}
+         </div><!--mx-4 -->
          </div><!-- / cankle 3 -->
-         <div class="col-6 col-lg-3">
+         <div class="col-sm col-md-6 col-xl-3">
+            <div class="mx-4">
             {% if page.cankle4 %}
             {{ page.cankle4 }}
             {% endif %}
+         </div><!--mx-4 -->
          </div><!-- / cankle 4 -->
       </div><!-- / row -->
    </div><!-- / cankle-container container -->

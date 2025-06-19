@@ -19,6 +19,7 @@ regions:
   nav_main: 'Main navigation region'
   nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
   nav_offcanvas: 'Campus Navigation Offcanvas'
+  mobile_chat:  'Mobile Chat'
   highlighted: 'Highlighted'
   help: 'Help'
   hero: 'Featured Image'

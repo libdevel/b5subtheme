@@ -48,6 +48,26 @@
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W2EETGCNZD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W2EETGCNZD');
+</script>
+
+
+
+<!-- plausible -->
+<script defer data-domain="sunybroome.info/library" src="https://implausible.info/js/script.file-downloads.outbound-links.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+
+<!-- umami -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="45395832-4328-4e67-9b1c-12725bf7d0ef"></script>
+
 
   </head>
   <body{{ attributes.addClass(body_classes) }}>

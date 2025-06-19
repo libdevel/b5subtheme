@@ -4,11 +4,9 @@
     "type": "drupal-theme",
     "license": "GPL-2.0-or-later",
     "require": {},
-    "minimum-stability": "stable",
     "authors": [
         {
             "name": "libdevel",
-            "homepage": "https://github.com/libdevel",
             "role": "Maintainer"
         }
     ]
