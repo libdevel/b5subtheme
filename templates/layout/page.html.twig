@@ -100,7 +100,7 @@ set footer_classes = ' ' ~
             </button>
             <div class="offcanvas offcanvas-end" id="campusNavDropdown">
                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Campus Main Menu</h5>
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Campus Main Menu</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                </div> <!-- /offcanvas-header -->
                <div class="offcanvas-body justify-content-md-end">
@@ -143,7 +143,7 @@ set footer_classes = ' ' ~
                </button>
                <div class="offcanvas offcanvas-end justify-content-md-end" id="libnavbarSupportedContent">
                   <div class="offcanvas-header">
-                     <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Library Menu</h5>
+                     <h5 class="offcanvas-title" id="offcanvasLibNavLabel">Library Menu</h5>
                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div><!-- /offcanvas-header -->
                   <div class="offcanvas-body justify-content-md-end">
@@ -214,6 +214,34 @@ set footer_classes = ' ' ~
       </div><!-- /news-wrapper -->
    </div><!-- /row -->
 </div><!-- / front-display container -->
+
+<section class="clearfix">
+    <div class="container">
+        <div class="row">
+  {{ page.full_width_content_bottom }}
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</section>
+
+{% if page.libcankle_1 or page.libcankle_2 %}
+<div class="libcankle">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+              {{ page.libcankle_1 }}
+            </div>
+            <div class="col-md-6">
+              {{ page.libcankle_2 }}
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- libcankle -->
+{% endif %}
+
+
+
 {# start the cankle #}
 <!-- #content bottom -->
 <div class="cankle clearfix">

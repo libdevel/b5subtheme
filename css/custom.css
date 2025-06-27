@@ -284,6 +284,9 @@ ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}
 .node__meta {padding-top:0; padding-bottom: 2rem;}
 .node__submitted {font-style:italic;}
 
+/* libcankle */
+.libcankle {padding-bottom: 4rem;}
+.libcankle .container {background-color:#f5f5f5; font-weight:500; padding: 2rem;}
 
 /* cankle */
 

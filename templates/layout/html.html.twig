@@ -67,7 +67,7 @@
 
 <!-- umami -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="45395832-4328-4e67-9b1c-12725bf7d0ef"></script>
-
+<script defer src="https://olivine-polecat.pikapod.net/script.js" data-website-id="a35da71f-2d5b-46b1-bcfe-808301c0e502"></script>
 
   </head>
   <body{{ attributes.addClass(body_classes) }}>
@@ -84,5 +84,16 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
+    <script type="text/javascript">
+      (() => {
+        const name = 'outbound-link-click';
+        document.querySelectorAll('a').forEach(a => {
+          if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+            a.setAttribute('data-umami-event', name);
+            a.setAttribute('data-umami-event-url', a.href);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
