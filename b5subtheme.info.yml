@@ -1,6 +1,6 @@
 name: 'B5 subtheme'
 type: theme
-description: 'B5 subtheme subtheme based on Bootstrap 5 theme.'
+description: 'B5 subtheme subtheme v04 based on Bootstrap 5 theme.'
 core_version_requirement: '^10.1 || ^11.0'
 'base theme': bootstrap5
 libraries:
