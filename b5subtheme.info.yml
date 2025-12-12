@@ -22,6 +22,7 @@ regions:
   mobile_chat:  'Mobile Chat'
   highlighted: 'Highlighted'
   help: 'Help'
+  alert: 'Alert'
   hero: 'Featured Image'
   libnav: 'Lib Navigation'
   libnav_collapsible: 'Lib Navigation (Collapsible)'

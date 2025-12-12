@@ -112,6 +112,13 @@ set footer_classes = ' ' ~
       </nav>
    </div> <!-- /secondnav -->
    {% endif %}
+    {% if page.alert %}
+    <div class="bcc_alert">
+        <div class="container">
+    {{ page.alert }}
+         </div><!-- /container -->
+     </div><!-- /alert -->
+    {% endif %}
    {% if page.hero %}
    {% block hero %}
    <div class="site-hero-wrap">
