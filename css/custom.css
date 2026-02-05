@@ -43,7 +43,9 @@ body {color:#232323; font-size: 1.1rem; line-height:1.66; margin: 0;
 
 
 a {color: #04407B; text-decoration: underline;}
-a:hover, a:focus {color: #946232;text-decoration: none; border:0px;}
+a:hover, a:focus {color: #946232;text-decoration: none; /*border:0px;*/}
+
+ a.btn-primary:hover,  a.btn-primary:focus {color: #fff;}
 
 
 
