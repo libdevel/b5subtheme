@@ -135,21 +135,18 @@ h2, h3, h4 {margin-top: 0.9rem;}
 /* sidebar menu */
 
 
- .fourthnav   ul {background-color: #000; color:#fff;}
-.fourthnav    ul.menu a.is-active {background-color: var(--broomeyellow); color: #000;}
+ .fourthnav  ul {background-color: #000; color:#fff; /*padding:30px;*/}
+ .fourthnav  ul.menu a.is-active {color: var(--broomeyellow);}
+ .fourthnav  li {border-bottom: 1px solid #d8d8d8;}
+ .fourthnav  a {font-weight:bold;  padding-bottom:15px; color:#fff;}
+ .fourthnav  .nav.nav-pills.flex-column > li {margin: -1px 0 0; /*border: solid 1px #e9ecef;*/}
+ .fourthnav  .nav.nav-pills.flex-column > li ul > li {border: none;}
+ .fourthnav  .nav.nav-pills.flex-column > li a:focus,  .nav.nav-pills.flex-column > li a:hover {color: var(--broomeyellow);}
+ .fourthnav  .nav.nav-pills.flex-column > li a:is-active {color: var(--broomeyellow);}
 
- .fourthnav   li {border-bottom: 1px solid #d8d8d8;}
+ .fourthnav a.is-active {color: #eeb310;}
 
- .fourthnav    a {font-weight:bold;  padding-bottom:15px; color:#fff;}
-
- .fourthnav    .nav.nav-pills.flex-column > li {margin: -1px 0 0;border: solid 1px #e9ecef;}
-
-  .fourthnav   .nav.nav-pills.flex-column > li ul > li {border: none;}
-
-  .fourthnav   .nav.nav-pills.flex-column > li a:focus,  .nav.nav-pills.flex-column > li a:hover {background-color: var(--broomeyellow); color: #000;}
-
-
- .fourthnav    .nav.nav-pills.flex-column > li ul > li a {font-weight: 500; font-size:0.9em;}
+ .fourthnav  .nav.nav-pills.flex-column > li ul > li a {font-weight: 500; font-size:0.9em;}
 
 /* alerts */
 .bcc_alert {background-color: #ff1111; color:#fff;}
@@ -219,6 +216,7 @@ div.homepagesearch.tabs li > button:hover  {font-weight: bold; color: #946232;}
 .s-lc-w-today-view-link a { text-decoration: underline; /*border-bottom: 1px dotted #ccc;*/ }
 .s-lc-w-today-view-all { padding: 8px 5px; }
 
+
 /* hours page */
 
 .sr-only {display:none;}
@@ -226,7 +224,6 @@ div.homepagesearch.tabs li > button:hover  {font-weight: bold; color: #946232;}
 .hours-all .nav-pills > li > a {border-radius: 4px;}
 .hours-all .nav-pills > li.active > a, .hours-all .nav-pills > li.active > a:hover, .hours-all .nav-pills > li.active > a:focus {
     color: #ffffff; background-color: #001E44;}
-
 
 
 .s-lc-fhw-map { border:1px solid #ccc; width: 750px; height: 300px; } 
@@ -240,6 +237,18 @@ div.homepagesearch.tabs li > button:hover  {font-weight: bold; color: #946232;}
 .s-lc-mhw-tb thead { background-color: #F5F5F5; } 
 .s-lc-mhw-header { text-align: center; } 
 .s-lc-mhw-header-date { text-align: center; display: inline-block; margin-top: 5px; font-size: 130%; } 
+
+.pull-left {float: left;}
+.pull-right {float: right;}
+
+
+.s-lc-mhw-header .btn-group-sm > .btn, .btn-sm {font-size: 20px; font-weight:bold;line-height: 1.5;}
+.s-lc-mhw-header .btn-default {color: #333;background-color: #fff;border-color: #ccc;}
+
+.s-lc-mhw-loc-name {display: none;}
+.s-lc-mhw-day-l {text-align: right;font-size: 1.2em; padding: 2px;font-weight: bold;}
+.s-lc-time {font-size: 1.1em;display: block;}
+.s-lc-note.s-lc-h-excep {font-size: 1em;}
 
 /* libcal events widget */
 
