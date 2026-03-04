@@ -161,7 +161,7 @@ h2, h3, h4 {margin-top: 0.9rem;}
 
 .library-logo {  background-color: #000;   padding: 0.5rem;  position: absolute;}
 
- .library-logo a { font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; font-size: 2em; font-weight: 700;  text-transform: uppercase;  color: #fff; text-decoration: none; line-height:1;}
+ .library-logo  { font-family:"Barlow Semi Condensed",Arial,Helvetica,sans-serif; font-size: 2em; font-weight: 700;  text-transform: uppercase;  color: #fff; text-decoration: none; line-height:1;}
 
  .library-logo a:hover,  .library-logo a:focus {text-decoration: underline;} 
 
@@ -356,7 +356,7 @@ a.footerlogo img {/*max-width:300px;*/}
   .secondnav  img {width: 250px; height: 27.5px;}
 
   .region-hero img { max-height:380px;}
-  .library-logo a {font-size:4em;}
+  .library-logo  {font-size:4em;}
 
    .fourthnav {padding: 20px;}
    .fourthnav a:hover {/*background-color:#f6f6f6;*/}
@@ -404,7 +404,7 @@ a.footerlogo img {/*max-width:300px;*/}
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
 
-    .library-logo a { font-size:4.5em;}
+    .library-logo  { font-size:4.5em;}
 
 }
 
@@ -413,7 +413,7 @@ a.footerlogo img {/*max-width:300px;*/}
 
 
     .region-hero img { max-height:380px;}
-    .library-logo a { font-size:5em;}
+    .library-logo  { font-size:5em;}
 
      h1 { font-size:4.0rem;}
 
