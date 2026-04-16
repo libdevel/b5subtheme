@@ -269,6 +269,9 @@ div.homepagesearch.tabs li > button:hover  {font-weight: bold; color: #946232;}
 .region-books-display li {float:left;margin-left:20px;list-style-image: none;
     list-style-type: none;}
 
+
+.books-display button:focus:not(:focus-visible) {outline: 1px;}
+
 /* add book-ul class in view */	
 ul.book-ul li {float:left;list-style-image: none;list-style-type: none;}	
 
